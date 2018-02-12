@@ -53,24 +53,8 @@ namespace ConsoleApplication1
             //}
             //    var isEqual= String.Equals(res1, res2, StringComparison.InvariantCultureIgnoreCase);
 
-            //Solution(50000);
+            Solution(500);
 
-            var properties = new Dictionary<string, Type> { { "SomeInt", typeof(int) }, { "SomeString", typeof(string) }, { "SomeObject", typeof(object) } };
-            //Kata.DefineClass("SimpleClass", properties, ref myType);
-            //myInstance = CreateInstance(myType);
-            //myInstance.AString = "Hi";
-
-
-            SampleClassParent obj = new SampleClassParent();
-            var myType = CompileResultType("SomeClass",properties, obj.GetType());
-            var myObject = Activator.CreateInstance(myType);
-
-
-            ((SampleClassParent)myObject).SetValue<string>("SomeString", "Hello World!");
-            foreach (PropertyInfo pi in myObject.GetType().GetProperties())
-            {
-                
-            }
         }
 
         public static long NextSmaller(long n)
